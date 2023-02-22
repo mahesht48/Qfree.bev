@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <style>
+        .container{
+        margin-left:'50px'}
+    </style>
+    <meta charset="UTF-8">
+    <title>product upload</title>
+</head>
+<body>
+<div class="container">
+<form method="post" enctype="multipart/form-data">{% csrf_token %}
+    <label>product_name</label>
+    <input type="text" name="product_name"><br><br>
+    <label>product_price</label>
+    <input type="number" name="product_price"><br><br>
+    <label>product_image </label>
+    <input type="file" name="product_image"><br><br>
+    <input type="submit">
+</form>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="col-12 col-lg-6 d-flex justify-content-center">
+  <div class="card mb-3" style="max-width: 540px;">
+    <div class="row g-0">
+      <div class="form">
+        <form method="post" enctype="multipart/form-data">{% csrf_token %}
+          <div class="col-12 col-lg-6 pb-1" style="float: left;">
+<!--            <img src="/static/images/{{b}}" class="img-fluid rounded-start" alt="...">-->
+
+          </div>
+          <div class="col-12 col-lg-6 pb-2" style="float: right;">
+            <div class="name text-center pb-2">
+              <input type="text" name="product_name " value="{{name}}" readonly style="width: 90%;">
+            </div>
+             <div class="price text-center pb-2">
+              <input type="text" name="price" value="{{total}}" readonly style="width: 90%;">
+            </div>
+
+            <div class="quantity text-center pb-2">
+              <input type="number" name="quantity" placeholder="quantity" value="{{quantity}}" style="width: 90%;">
+            </div>
+            <div class="button text-center">
+                <a href="http://127.0.0.1:8000/succ/">
+                    <button type="button" class="btn btn-primary">Primary</button>
+                </a>
+
+
+
+
+            </div>
+          </div>
+
+        </form>
+      </div>
+    </div>
+</div>
+</div>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="container mt-5">
+    <div class="row">
+        {% for i,j,k,l in mylist %}
+          <div class="col-sm-12 col-lg-4 d-flex justify-content-centre text-center text-center pb-4">
+              <div class="card" style="width: 18rem;">
+                  <img src="/static/images/{{i}}" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">{{i}}</h5>
+                    <p class="card-text">{{k}}</p>
+                      <p class="card-text"> {{j}}</p>
+
+                    <a href="http://127.0.0.1:8000/wishlist/{{l}}/" class="btn btn-primary">wishlist</a>
+                      <a href="http://127.0.0.1:8000/cart/{{l}}/" class="btn btn-primary">cart</a>
+
+                  </div>
+              </div>
+          </div>
+        {% endfor %}
+    </div>
+</div>
+
+</body>
+</html>
